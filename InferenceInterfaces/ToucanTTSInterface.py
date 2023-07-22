@@ -37,7 +37,7 @@ class ToucanTTSInterface(torch.nn.Module):
             if faster_vocoder:
                 vocoder_model_path = os.path.join(MODELS_DIR, "Avocodo", "best.pt")
             else:
-                vocoder_model_path = os.path.join(MODELS_DIR, "BigVGAN", "best.pt")
+                vocoder_model_path = os.path.join(MODELS_DIR, "BigVGAN_Full", "best.pt")
 
         ################################
         #   build text to phone        #
