@@ -62,6 +62,14 @@ def download_models():
         url="https://github.com/DigitalPhonetics/IMS-Toucan/releases/download/v2.5/embedding_gan.pt",
         filename=os.path.abspath(os.path.join(MODELS_DIR, "Embedding", "embedding_gan.pt")),
         reporthook=report)
+    
+    ##############
+    print("Downloading BigVGAN full model")
+    os.makedirs(os.path.join(MODELS_DIR, "BigVGAN_Full"), exist_ok=True)
+    filename, headers = urllib.request.urlretrieve(
+        url="https://github.com/DigitalPhonetics/IMS-Toucan/releases/download/v2.5/BigVGAN_full_checkpoint_step_2061805.pt",
+        filename=os.path.abspath(os.path.join(MODELS_DIR, "BigVGAN_Full", "best.pt")),
+        reporthook=report)
 
 
 if __name__ == '__main__':
